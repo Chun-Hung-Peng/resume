@@ -4,12 +4,13 @@ body{
     color: #443f3f;
     line-height: 28px;
     letter-spacing: 1px;
-    padding: 30px;
-    background-color: #F9FBFC;
+    padding: 50px;
     display: flex;
     justify-content: center;
   }
-  
+  section{
+    background-color: #F9FBFC;
+  }
   ul{
     list-style: none;
     padding: 0;
@@ -46,14 +47,11 @@ body{
   .title{
       font-size: 20px;
   }
-  .contain{
-      font-size: 14px;
-  }
   .resume{
     display: flex;
     max-width: 950px;
     padding: 50px;
-    border: 8px solid #A0DBDB;
+    border: 8px solid #457B9D;
     position: relative;  /*讓absolute做基準*/
     box-shadow: 0 0 35px #393E46;
   }
@@ -92,8 +90,8 @@ body{
   }
   
   .decoration{
-    width: 300px;
-    height: 140px;
+    width: 200px;
+    height: 100px;
     background: linear-gradient(135deg, #F1FAEE, #A8DADC);  /*135deg變成從左上到右下漸層*/
     border-radius: 70px 0 0 70px;
     position: absolute;
@@ -103,7 +101,6 @@ body{
   
   /* Experience / Works */
   .year{
-    display: flex;
     margin-bottom:10px;
   }
   
@@ -264,4 +261,21 @@ body{
   
   .listPor a{
     color: #137adb;
+  }
+  body{
+    background: linear-gradient(-45deg, #F1FAEE, #A8DADC, #457B9D, #1D3557);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
