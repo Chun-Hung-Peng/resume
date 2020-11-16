@@ -4,7 +4,7 @@ body{
     color: #443f3f;
     line-height: 28px;
     letter-spacing: 1px;
-    padding: 50px;
+    padding: 30px;
     background-color: #F9FBFC;
     display: flex;
     justify-content: center;
@@ -43,7 +43,12 @@ body{
     width: 30%;
     margin-left: 0; /*讓hr靠左*/
   }
-  
+  .title{
+      font-size: 20px;
+  }
+  .contain{
+      font-size: 14px;
+  }
   .resume{
     display: flex;
     max-width: 950px;
@@ -55,29 +60,17 @@ body{
   .top{
     position: relative;
   }
-  
   .bighead{
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    position: absolute;
     top: -30px;
     left: 0;
+    background: url(./pic.jpg);
+    background-size: cover;
     box-shadow: 0 0 10px #393E46;
-    overflow: hidden;
-    position: relative;
   }
-  img {  
-    max-height: 100%;  
-    max-width: 100%; 
-    width: auto;
-    height: auto;
-    position: absolute;  
-    top: 0;  
-    bottom: 0;  
-    left: 0;  
-    right: 0;  
-    margin: auto;
-}
   .myname{
     margin-left: 150px;
   }
@@ -101,7 +94,7 @@ body{
   .decoration{
     width: 300px;
     height: 140px;
-    background: linear-gradient(135deg, #A0DBDB, #FCEA90);  /*135deg變成從左上到右下漸層*/
+    background: linear-gradient(135deg, #F1FAEE, #A8DADC);  /*135deg變成從左上到右下漸層*/
     border-radius: 70px 0 0 70px;
     position: absolute;
     right: 0;
