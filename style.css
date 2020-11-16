@@ -1,175 +1,264 @@
-.cv {
-    border: 1px solid #000;
-    box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
-  }
+body{
+  font-family: 微軟正黑體;
+  font-size: 15px;
+  color: #443f3f;
+  line-height: 28px;
+  letter-spacing: 1px;
+  padding: 50px;
+  background-color: #F9FBFC;
+  display: flex;
+  justify-content: center;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+h2{
+  margin: 0 0 25px;
+}
+
+h2::after{
+  content: ""; /*after文字內容不必設定*/
+  display: inline-block;  /*after用區塊呈現，並且可以設定寬高*/
+  width: 20px;
+  height: 8px;
+  background-color: #56A7A7;
+  margin-left: 10px;
+}
+
+h4{
+  margin: 40px 0 0;
+}
+
+a{
+  text-decoration: initial;
+  color: initial;
+}
+
+hr{
+  border: none;  /*取消hr預設的border*/
+  border-bottom: 4px solid #A0DBDB;
+  width: 30%;
+  margin-left: 0; /*讓hr靠左*/
+}
+
+.resume{
+  display: flex;
+  max-width: 950px;
+  padding: 50px;
+  border: 8px solid #A0DBDB;
+  position: relative;  /*讓absolute做基準*/
+  box-shadow: 0 0 35px #393E46;
+}
+.top{
+  position: relative;
+}
+
+.bighead{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: url(https://scontent.fkhh1-1.fna.fbcdn.net/v/t1.0-9/12191779_10153620608619376_8195080038284689177_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeEjBbwJfxWvI83zZvkv_8X8I-r6gcwksDmKO_IufyssP4uycXqXy7I5djBUlw4lFEfaRl2aPl_V2CPj_Lb8-bfeb64qXos3LQ6Eq8NZjxhhyA&oh=ce073b7f178dd3cc4948d07ef1dc53b0&oe=5B565284);
+  background-size: cover;
+  box-shadow: 0 0 10px #393E46;
+}
+
+.myname{
+  margin-left: 150px;
+}
+
+.left, .right{
+  padding: 15px;
+}
+
+.left{
+  flex: 5;
+  padding-right: 50px;
+  border-right: 1px solid #A0DBDB;
+}
+
+.right{
+  flex: 7;
+  padding-left: 50px;
+  padding-top: 150px;
+}
+
+.decoration{
+  width: 300px;
+  height: 140px;
+  background: linear-gradient(135deg, #A0DBDB, #FCEA90);  /*135deg變成從左上到右下漸層*/
+  border-radius: 70px 0 0 70px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+
+/* Experience / Works */
+.year{
+  display: flex;
+  margin-bottom:10px;
+}
+
+.year ul{
+  padding-left: 10px;  /*要拿來做框線*/
+  margin-left:10px;
+  border-left: 4px solid #443f3f;
+}
+
+.year:nth-child(1) ul{
+  border-color: #7BB6A2;
+}
+
+.year:nth-child(2) ul{
+  border-color: #A9C99C;
+}
+
+.year:nth-child(3) ul{
+  border-color: #DADC95;
+}
+
+/* listSkill */
+.listSkill{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listSkill li{
+  width: 25%;
+  padding: 5px;
+  box-sizing: border-box;  /*讓width計算是從border往內*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 圓形圖 */
+.circle{
+  width: 50px;
+  height: 50px;
+  background-color: #FCEA90;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden; /*把超過圓形的地方隱藏起來*/
+}
+
+.circle::after{  /*中間的小圓，同body背景色*/
+  content: "";
+  display: block;
+  width: calc(100% - 20px);  /*calc()去計算*/
+  height: calc(100% - 20px);  /*calc()去計算*/
+  border-radius: 50%;
+  background-color: #F9FBFC;
+  position: relative;  /*要給優先度必需是可以定位的元素，所以給它 position: relative*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /*top、left完後，小圓的左上角剛好在正中間，所以要再平移回去50%*/
+}
   
-  .avatar {
-    background: #ffffff;
-    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #454545 50%, #454545 100%);
-    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #454545 50%, #454545 100%);
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #454545 50%, #454545 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#454545', GradientType=0);
-    height: 300px;
-    text-align: center;
-  }
-  
-  .avatar img {
-    padding: 5px;
-    border-radius: 50%;
-    margin-top: 25px;
-    background: #fff;
-    max-width:250px;
-  }
-  
-  .gray {
-    background: #454545;
-  }
-  
-  .bio {
-    background: #454545;
-    color: #fff;
-  }
-  
-  .bio hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-  }
-  
-  .about h3,
-  .contact h3 {
-    background-color: #4886a5;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
-    color: #fff;
-    font-size: 1.4em;
-    margin: 0 0 24px 26px;
-    padding: 4px 0 4px 12px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .about h3:after,
-  .contact h3:after {
-    border-color: #263746 transparent transparent #263746;
-    border-style: solid;
-    border-width: 6px;
-    bottom: -12px;
-    content: "";
-    position: absolute;
-    right: 0;
-  }
-  
-  .about h3:before,
-  .contact h3:before {
-    color: #fff;
-    content: "";
-    font: 26px sans-serif;
-    position: absolute;
-    right: 12px;
-    top: -2px;
-  }
-  
-  .contact {
-    font-size: 1.2em;
-  }
-  
-  .circle {
-    padding: 10px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-  }
-  
-  .experience .glyphicon,
-  .education .glyphicon,
-  .work-skills .glyphicon,
-  .personal-skills .glyphicon {
-    font-size: 1.5em;
-  }
-  
-  .experience hr,
-  .education hr,
-  .work-skills hr,
-  .personal-skills hr {
-    border-top: 1px dashed #000;
-  }
-  
-  .experience .date,
-  .education .date,
-  .work-skills .date,
-  ,
-  .personal-skills .date {
-    font-size: 1em;
-  }
-  
-  .experience .title,
-  .education .title,
-  .work-skills .title,
-  .personal-skills .title {
-    color: #4886a5;
-    font-weight: bold;
-  }
-  
-  .skills dt {
-    margin: 0;
-    padding: 1rem 0;
-    font-family: 'VT323', ;
-    font-size: 24px;
-    color: #3D3D3D;
-  }
-  
-  .skills dt:first-child {
-    padding-top: 0;
-  }
-  
-  .skills dt:after {
-    width: 100%;
-    background-color: #3D3D3D;
-    height: 0.5rem;
-    content: "";
-    display: block;
-  }
-  
-  .skills dd {
-    width: 100%;
-    height: 0.5rem;
-    position: relative;
-    right: 0;
-    margin: -1.5rem 0 0;
-    overflow: hidden;
-    text-indent: -1000px;
-  }
-  
-  .skills dd {
-    background-color: #4886a5;
-  }
-  
-  body {
-    padding: 40px 0;
-  }
-  
-  @media (max-width: 768px) {
-  .mobile-no-pad {
-    padding-left:0!important;
-    padding-right:0!important;
-  }
-    body {padding: 0;}
-    
-    .about h3,
-  .contact h3 {
-    margin: 0 0 10px 0;
-    padding: 4px 0 4px 12px;
-  }
-    .about h3:after,
-  .contact h3:after {
-    display:none;
-  }
-    
-   .about h3:before,
-  .contact h3:before {
-    right: 0;
-    top: -2px;
-  }
-  }
-  
-  
+.p90, .p180, .p270, .p360{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: #A0DBDB;
+}
+
+.p180{
+  top: 50%;
+}
+
+.p270{
+  left: 0;
+  top: 50%;
+}
+
+.p360{
+  left: 0;
+  top: 0;
+}
+
+/* 社群icon */
+.btn-fb, .btn-github{
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.btn-fb{
+  color: #4267B2;
+}
+
+/* Related Skills */
+.listRelate .bar{
+  width: 150px;
+  height: 10px;
+  border: 2px solid #56A7A7;
+  border-radius: 5px;
+}
+
+.listRelate li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.value{
+  height: 100%;
+  background-color: #56A7A7;
+}
+
+.value.p10{
+  width: 10%;
+}
+
+.value.p20{
+  width: 20%;
+}
+
+.value.p30{
+  width: 30%;
+}
+
+.value.p40{
+  width: 40%;
+}
+
+.value.p50{
+  width: 50%;
+}
+
+.value.p60{
+  width: 60%;
+}
+
+.value.p70{
+  width: 70%;
+}
+
+.value.p80{
+  width: 80%;
+}
+
+.value.p90{
+  width: 90%;
+}
+
+.value.p100{
+  width: 100%;
+}
+
+/* Portfolio */
+.listPor li{
+  margin-bottom: 10px;
+}
+
+.listPor a{
+  color: #137adb;
+}
