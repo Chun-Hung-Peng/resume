@@ -21,8 +21,8 @@ body{
   }
   
   h2::after{
-    content: ""; /*after文字內容不必設定*/
-    display: inline-block;  /*after用區塊呈現，並且可以設定寬高*/
+    content: ""; 
+    display: inline-block;  
     width: 20px;
     height: 8px;
     background-color: #56A7A7;
@@ -39,10 +39,10 @@ body{
   }
   
   hr{
-    border: none;  /*取消hr預設的border*/
+    border: none; 
     border-bottom: 4px solid #A0DBDB;
     width: 30%;
-    margin-left: 0; /*讓hr靠左*/
+    margin-left: 0; 
   }
   .title{
       font-size: 20px;
@@ -52,7 +52,7 @@ body{
     max-width: 950px;
     padding: 50px;
     border: 8px solid #457B9D;
-    position: relative;  /*讓absolute做基準*/
+    position: relative;  
     box-shadow: 0 0 35px #393E46;
   }
   .top{
@@ -92,20 +92,19 @@ body{
   .decoration{
     width: 200px;
     height: 100px;
-    background: linear-gradient(135deg, #F1FAEE, #A8DADC);  /*135deg變成從左上到右下漸層*/
+    background: linear-gradient(135deg, #F1FAEE, #A8DADC);  
     border-radius: 70px 0 0 70px;
     position: absolute;
     right: 0;
     top: 50px;
   }
   
-  /* Experience / Works */
   .year{
     margin-bottom:10px;
   }
   
   .year ul{
-    padding-left: 10px;  /*要拿來做框線*/
+    padding-left: 10px;  
     margin-left:10px;
     border-left: 4px solid #443f3f;
   }
@@ -122,7 +121,6 @@ body{
     border-color: #DADC95;
   }
   
-  /* listSkill */
   .listSkill{
     display: flex;
     flex-wrap: wrap;
@@ -131,34 +129,32 @@ body{
   .listSkill li{
     width: 25%;
     padding: 5px;
-    box-sizing: border-box;  /*讓width計算是從border往內*/
+    box-sizing: border-box; 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  
-  /* 圓形圖 */
   .circle{
     width: 50px;
     height: 50px;
     background-color: #FCEA90;
     border-radius: 50%;
     position: relative;
-    overflow: hidden; /*把超過圓形的地方隱藏起來*/
+    overflow: hidden; 
   }
   
-  .circle::after{  /*中間的小圓，同body背景色*/
+  .circle::after{  
     content: "";
     display: block;
-    width: calc(100% - 20px);  /*calc()去計算*/
-    height: calc(100% - 20px);  /*calc()去計算*/
+    width: calc(100% - 20px);  
+    height: calc(100% - 20px);  
     border-radius: 50%;
     background-color: #F9FBFC;
-    position: relative;  /*要給優先度必需是可以定位的元素，所以給它 position: relative*/
+    position: relative;  
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);  /*top、left完後，小圓的左上角剛好在正中間，所以要再平移回去50%*/
+    transform: translate(-50%, -50%);  
   }
     
   .p90, .p180, .p270, .p360{
@@ -183,8 +179,6 @@ body{
     left: 0;
     top: 0;
   }
-  
-  /* 社群icon */
   .btn-fb, .btn-github{
     font-size: 40px;
     margin-right: 10px;
@@ -193,8 +187,6 @@ body{
   .btn-fb{
     color: #4267B2;
   }
-  
-  /* Related Skills */
   .listRelate .bar{
     width: 150px;
     height: 10px;
@@ -254,7 +246,6 @@ body{
     width: 100%;
   }
   
-  /* Portfolio */
   .listPor li{
     margin-bottom: 10px;
   }
@@ -279,3 +270,4 @@ body{
       background-position: 0% 50%;
     }
   }
+  
