@@ -37,7 +37,6 @@ body{
     text-decoration: initial;
     color: initial;
   }
-  
   hr{
     border: none; 
     border-bottom: 4px solid #A0DBDB;
@@ -273,4 +272,8 @@ body{
   .carousel-item{
     max-width: 420px;
     max-height: 200px;
+  }
+  .self-info{
+    text-align:right;
+    align-items: center;
   }
