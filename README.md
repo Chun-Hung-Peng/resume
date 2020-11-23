@@ -1,1 +1,1 @@
-[簡歷](https://chun-hung-peng.github.io/chunhungs/resume)
+[resume](https://chun-hung-peng.github.io/chunhungs/resume)
