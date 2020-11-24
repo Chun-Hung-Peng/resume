@@ -71,7 +71,7 @@ hr {
   position: absolute;
   top: -30px;
   left: 0;
-  background: url('/pic.jpg');
+  background: url('/assets/img/pic.jpg');
   background-size: cover;
   box-shadow: 0 0 10px #393e46
 }
