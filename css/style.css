@@ -71,13 +71,15 @@ hr {
   position: absolute;
   top: -30px;
   left: 0;
-  background: url("../assets/img/pic.png");
+  background: url(../assets/img/pic.png);
   background-size: cover;
   box-shadow: 0 0 10px #393e46
 }
+
 .myname {
   margin-left: 150px
 }
+
 .left,
 .right {
   padding: 15px
